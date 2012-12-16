@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"> 
+		
+		<title>jqwwipe</title>
+		
+		<style type="text/css">
+			#swipe_area {
+				border:				1px solid #e4e4e4;
+				background-color: 	#f7f7f7;
+				width:				500px;
+				height:				150px;
+				color:				#bbbbbb;
+				text-align:			center;
+				padding-top:		120px;
+			}
+		</style>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.jqswipe.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#swipe_area").jqswipe({
+					swipeLeft: function() {
+						$("#swipe_area").html("Left");
+					},
+					swipeRight: function() {
+						$("#swipe_area").html("Right");
+					},
+					swipeTop: function() {
+						$("#swipe_area").html("Top");
+					},
+					swipeBottom: function() {
+						$("#swipe_area").html("Bottom");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Open this page with a mobile browser (iPad, iPhone...)</h1>
+		<div id="swipe_area"></div>
+	</body>
+</html>
